@@ -104,7 +104,7 @@ class _HomePageState extends ConsumerState<HomePage>
       await handleNotificationClick(message);
     });
 
-    _tabController = TabController(length: 3, vsync: this, initialIndex: 0);
+    _tabController = TabController(length: 1, vsync: this, initialIndex: 0);
     _tabController.addListener(handleTabIndexChange);
 
     _floatingButtons = [
@@ -195,28 +195,28 @@ class _HomePageState extends ConsumerState<HomePage>
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'WhatsApp',
+            'Parcel',
             style: textTheme.titleLarge.copyWith(color: colorTheme.iconColor),
           ),
           actions: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.camera_alt_outlined,
-              ),
-            ),
+            // IconButton(
+            //   onPressed: () {},
+            //   icon: const Icon(
+            //     Icons.camera_alt_outlined,
+            //   ),
+            // ),
             IconButton(
               onPressed: () {},
               icon: const Icon(
                 Icons.search,
               ),
             ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.more_vert,
-              ),
-            ),
+            // IconButton(
+            //   onPressed: () {},
+            //   icon: const Icon(
+            //     Icons.more_vert,
+            //   ),
+            // ),
           ],
           bottom: TabBar(
             controller: _tabController,
@@ -227,14 +227,14 @@ class _HomePageState extends ConsumerState<HomePage>
             unselectedLabelColor: colorTheme.unselectedLabelColor,
             tabs: const [
               Tab(
-                text: 'CHATS',
+                text: 'CUSTOMERS',
               ),
-              Tab(
-                text: 'STATUS',
-              ),
-              Tab(
-                text: 'CALLS',
-              ),
+              // Tab(
+              //   text: 'STATUS',
+              // ),
+              // Tab(
+              //   text: 'CALLS',
+              // ),
             ],
           ),
         ),
@@ -245,15 +245,15 @@ class _HomePageState extends ConsumerState<HomePage>
           ),
           children: [
             RecentChatsBody(user: widget.user),
-            const Center(
-              child: Text('Coming soon'),
-            ),
-            const Center(
-              child: Text('Coming soon'),
-            )
+            // const Center(
+            //   child: Text('Coming soon'),
+            // ),
+            // const Center(
+            //   child: Text('Coming soon'),
+            // )
           ],
         ),
-        floatingActionButton: _floatingButtons[_tabController.index],
+        // floatingActionButton: _floatingButtons[_tabController.index],
       ),
     );
   }
@@ -312,38 +312,7 @@ class RecentChatsBody extends ConsumerWidget {
             ),
             if (chats.isNotEmpty) ...[
               const Divider(),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.lock,
-                      size: 18,
-                      color: Theme.of(context).brightness == Brightness.light
-                          ? colorTheme.greyColor
-                          : colorTheme.iconColor,
-                    ),
-                    const SizedBox(width: 4),
-                    RichText(
-                      textAlign: TextAlign.center,
-                      text: TextSpan(
-                        style: Theme.of(context).textTheme.bodySmall,
-                        children: [
-                          TextSpan(
-                            text: 'Your personal messages are ',
-                            style: TextStyle(color: colorTheme.greyColor),
-                          ),
-                          TextSpan(
-                            text: 'end-to-end encrypted',
-                            style: TextStyle(color: colorTheme.greenColor),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+             
             ]
           ],
         );

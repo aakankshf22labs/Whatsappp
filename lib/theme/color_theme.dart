@@ -28,7 +28,7 @@ class AppColorsLight {
   static const iconColor = Color.fromRGBO(248, 249, 249, 1);
   static const textColor1 = Color.fromRGBO(24, 24, 24, 1);
   static const textColor2 = Color.fromRGBO(0, 0, 0, 1);
-  static const appBarColor = Color.fromRGBO(0, 128, 105, 1);
+  static const appBarColor = Color.fromRGBO(47,128,237,1);
   static const dividerColor = Color.fromRGBO(37, 45, 50, 1);
   static const backgroundColor = Color.fromRGBO(252, 252, 252, 1);
   static const errorSnackBarColor = Color.fromRGBO(211, 45, 81, 1);

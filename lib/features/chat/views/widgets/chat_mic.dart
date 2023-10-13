@@ -38,9 +38,9 @@ class ChatInputMic extends ConsumerWidget {
       child: recordingState == RecordingState.notRecording
           ? CircleAvatar(
               radius: 24,
-              backgroundColor: colorTheme.greenColor,
+              backgroundColor: colorTheme.appBarColor,
               child: const Icon(
-                Icons.mic,
+                Icons.shop,
                 color: Colors.white,
               ),
             )

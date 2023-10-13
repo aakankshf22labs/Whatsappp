@@ -131,15 +131,15 @@ class _ChatPageState extends ConsumerState<ChatPage> {
           ),
         ),
         actions: [
-          IconButton(
-            onPressed:
-                recordingState == RecordingState.notRecording ? () {} : null,
-            icon: const Icon(
-              Icons.videocam_rounded,
-              size: 28,
-              color: Colors.white,
-            ),
-          ),
+          // IconButton(
+            // onPressed:
+            //     recordingState == RecordingState.notRecording ? () {} : null,
+            // icon: const Icon(
+            //   Icons.videocam_rounded,
+            //   size: 28,
+            //   color: Colors.white,
+            // ),
+          // ),
           IconButton(
             onPressed:
                 recordingState == RecordingState.notRecording ? () {} : null,
@@ -149,14 +149,14 @@ class _ChatPageState extends ConsumerState<ChatPage> {
               size: 24,
             ),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.more_vert,
-              color: Colors.white,
-              size: 26,
-            ),
-          ),
+          // IconButton(
+          //   onPressed: () {},
+          //   icon: const Icon(
+          //     Icons.more_vert,
+          //     color: Colors.white,
+          //     size: 26,
+          //   ),
+          // ),
         ],
       ),
       body: Container(
@@ -329,9 +329,9 @@ class _ChatInputContainerState extends ConsumerState<ChatInputContainer>
                             },
                             child: CircleAvatar(
                               radius: 24,
-                              backgroundColor: colorTheme.greenColor,
+                              backgroundColor: colorTheme.appBarColor,
                               child: const Icon(
-                                Icons.send,
+                                Icons.shop,
                                 color: Colors.white,
                               ),
                             ),
@@ -616,36 +616,15 @@ class _ChatStreamState extends ConsumerState<ChatStream> {
                     return buildMessageCard(index, messages);
                   },
                   findChildIndexCallback: (key) {
-                    return getMessageIndexByKey(key, messages);
+                    // return getMessageIndexByKey(key, messages);
                   },
                 ),
                 SliverToBoxAdapter(
                   child: Center(
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.8,
-                      margin: const EdgeInsets.only(bottom: 4),
-                      padding: const EdgeInsets.all(6),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: isDarkTheme
-                            ? const Color.fromARGB(200, 24, 34, 40)
-                            : const Color.fromARGB(148, 248, 236, 130),
-                      ),
-                      child: Text(
-                        '🔒Messages and calls are end-to-end encrypted. No one outside this chat, not even WhatsApp, can read or listen to them. Tap to learn more.',
-                        style: TextStyle(
-                          fontSize: 13,
-                          color: isDarkTheme
-                              ? colorTheme.yellowColor
-                              : colorTheme.textColor1,
-                        ),
-                        softWrap: true,
-                        textWidthBasis: TextWidthBasis.longestLine,
-                        textAlign: TextAlign.center,
-                      ),
+                    child: Container(),
                     ),
                   ),
-                ),
+               
                 SliverToBoxAdapter(
                   child: Center(
                     child: ChatDate(
@@ -697,4 +676,6 @@ class _ChatStreamState extends ConsumerState<ChatStream> {
       ],
     );
   }
+
+  
 }

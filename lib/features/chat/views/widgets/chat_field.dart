@@ -31,13 +31,13 @@ class ChatField extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 11.0),
-            child: leading,
-          ),
-          const SizedBox(
-            width: 12.0,
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.only(bottom: 11.0),
+          //   child: leading,
+          // ),
+          // const SizedBox(
+          //   width: 12.0,
+          // ),
           Expanded(
             child: TextField(
               onChanged: onTextChanged,
@@ -49,7 +49,7 @@ class ChatField extends StatelessWidget {
               cursorColor: colorTheme.greenColor,
               cursorHeight: 20,
               decoration: const InputDecoration(
-                hintText: 'Message',
+                hintText: 'Type for store records',
                 border: InputBorder.none,
               ),
             ),
