@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/theme/color_theme.dart';
-
+import 'package:whatsapp_clone/theme/theme.dart';
 
 class OptionSelector extends StatelessWidget {
   const OptionSelector(
@@ -38,48 +38,15 @@ class OptionSelector extends StatelessWidget {
           padding: const EdgeInsets.all(4),
           child: Text(title),
         ),
-        // OptionView( ),
-        // Loop options over below component
-        _Option(
-          maxWidth: maxWidth,
-          colorTheme: colorTheme,
-          title: '1',
-        ),
-        _Option(
-          maxWidth: maxWidth,
-          colorTheme: colorTheme,
-          title: '2',
-        ),
+        Column(
+            children: options
+                .map((option) => _Option(
+                    maxWidth: maxWidth, colorTheme: colorTheme, title: option))
+                .toList())
       ],
     );
   }
 }
-
-// class OptionView extends StatelessWidget {
-//   const _Option({
-//     super.key,
-//     required list, required double maxWidth, required ColorTheme colorTheme
-//   });
-
-
-
-//   final list = ["2", "22", "222"];
-//   Widget build(BuildContext context) {
-//   final colorTheme = Theme.of(context).custom.colorTheme;
-
-//   final maxWidth = MediaQuery.of(context).size.width * 0.80;
-//     return Column(
-//       children: list
-//           .map((item) => _Option(
-//                 maxWidth: maxWidth,
-//                 colorTheme: colorTheme,
-//                 title: item,
-//               ))
-//           .toList(),
-//     );
-//   }
-// }
-
 class _Option extends StatelessWidget {
   const _Option({
     super.key,
